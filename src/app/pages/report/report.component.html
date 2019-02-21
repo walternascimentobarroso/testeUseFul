@@ -1,0 +1,17 @@
+<div [@routerTransition]>
+    <app-breadcrumb [heading]="'Relatório'" [icon]="'far fa-file'"></app-breadcrumb>
+    <div class="row">
+        <div class="col col-sm-12">
+            <div class="card mb-12">
+                <div class="card-header">
+                    Vendas Mensais
+                </div>
+                <div class="card-body">
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+                        [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
